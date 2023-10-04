@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Frank Ssekanjako</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <title>Movie Download</title>
+    <style>
+        /* Reset some default styles */
+        body,
+        h1,
+        h2,
+        p,
+        ul,
+        li,
+        blockquote {
+          margin: 0;
+          padding: 0;
+        }
+  
+        /* Apply a background color and set a common font family */
+        body {
+          background-color: #f2f2f2; /* Light gray background */
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          color: #333; /* Dark gray text color */
+        }
+  
+        /* Header styles */
+        h1 {
+          text-align: center;
+          color: #007acc; /* Blue heading color */
+          margin-top: 20px;
+        }
+  
+        /* Main content container */
+        #bio {
+          background-color: #fff; /* White background for the bio section */
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+  
+        /* Bio section text styles */
+        #bio p {
+          margin-bottom: 20px;
+          text-align: justify;
+        }
+  
+        /* Skills section */
+        #skills {
+          background-color: #fff; /* White background for the skills section */
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+  
+        /* Skills list styles */
+        #skills ul {
+          list-style-type: none;
+          padding-left: 20px;
+        }
+  
+        /* Resume/CV section */
+        #resume {
+          background-color: #fff; /* White background for the resume section */
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+  
+        /* Download resume link */
+        #resume a {
+          display: inline-block;
+          background-color: #007acc;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px 20px;
+          margin-top: 10px;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+        }
+  
+        #resume a:hover {
+          background-color: #005b8e; /* Darker blue on hover */
+        }
+  
+        /* Contact section */
+        #contact {
+          background-color: #fff; /* White background for the contact section */
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+  
+        /* Contact info list styles */
+        #contact ul {
+          list-style-type: none;
+          padding-left: 20px;
+        }
+  
+        #contact ul li {
+          margin-bottom: 10px;
+        }
+  
+        /* Links styles */
+        a {
+          color: #007acc;
+          text-decoration: none;
+        }
+  
+        a:hover {
+          text-decoration: underline;
+        }
+  
+        /* Testimonials section */
+        #testimonials {
+          background-color: #fff; /* White background for the testimonials section */
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+  
+        /* Footer styles */
+        footer {
+          text-align: center;
+          background-color: #333; /* Dark background for the footer */
+          color: #fff; /* White text color */
+          padding: 10px 0;
+        }
+  
+        /* Blockquote styles */
+        blockquote {
+          background-color: #f7f7f7; /* Light gray background for blockquotes */
+          padding: 10px 20px;
+          border-left: 5px solid #007acc; /* Blue border on the left */
+          margin: 20px 0;
+        }
+  
+        /* Responsive styles for smaller screens */
+        @media screen and (max-width: 768px) {
+          /* Adjust styles for smaller screens as needed */
+          #bio,
+          #skills,
+          #resume,
+          #contact,
+          #testimonials {
+            margin: 10px;
+            padding: 15px;
+          }
+        }
+        .navbar {
+          background-color: rgba(
+            34,
+            34,
+            34,
+            0.7
+          ); /* Transparent black background */
+          border-radius: 25px;
+          padding: 10px 0;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 100;
+        }
+  
+        .navbar ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: space-around;
+        }
+  
+        .navbar li {
+          display: inline;
+        }
+  
+        .navbar li a {
+          display: inline-block;
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          padding: 10px 20px;
+          border-radius: 20px;
+        }
+  
+        .navbar li a:hover {
+          background-color: #4caf50;
+          color: rgba(34, 34, 34, 0.7);
+        }
+        /* Add your other CSS rules here */
+
+        .circular-image {
+            text-align: justify;
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 50%; /* Makes the image circular */
+    display: block; /* Ensures proper rendering as a block-level element */
+    float: left; /* Aligns the image to the left */
+    margin-right: 10px; /* Adds a small margin to the right for spacing */
+}
+
+      </style>
+  </head>
+  <body>
+    <nav>
+        <ul class="navbar">
+          <li><a href="../about_me">⬅️ Go back</a></li>
+        </ul><br><br><br><br>
+    <h1>Download Our Movie</h1>
+    <p>Click  to download the movie:</p>
+    <p><em>Comming soon!!!</em></p>
+<!--     <a href="{% static 'media/movie.mp4' %}" download>
+        <img src="{% static 'images/DM1.jpg' %}" alt="movie" class="circular-image"/>
+        <br>
+        Lions documentary
+    </a><br><br> --><br>
+  </body>
+</html>

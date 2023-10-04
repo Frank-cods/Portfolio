@@ -1,0 +1,318 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frank Ssekanjako - Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <style>
+      /* Reset some default browser styles */
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      li,
+      a,
+      blockquote {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: lightblue;
+        color: #333;
+      }
+      /* Header Section Styles */
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #354f52;
+        color: white;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin: 20px 0;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
+
+      header a {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #25a08d;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      header a:hover {
+        background-color: #1d7c6d;
+      }
+
+      /* Portfolio Section Styles */
+      #portfolio {
+        padding: 20px;
+      }
+      .navbar {
+        background-color: rgba(
+          34,
+          34,
+          34,
+          0.7
+        ); /* Transparent black background */
+        border-radius: 25px;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .navbar li {
+        display: inline;
+      }
+
+      .navbar li a {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+
+      .navbar li a:hover {
+        background-color: #4caf50;
+        color: #fff;
+      }
+
+      .content {
+        margin-top: 60px;
+      }
+
+      .project {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+      }
+
+      .project h3 {
+        font-size: 1.5rem;
+      }
+
+      .project img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+      }
+
+      .project p {
+        flex-grow: 1;
+      }
+
+      .project a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #25a08d;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .project a:hover {
+        background-color: #1d7c6d;
+      }
+
+      /* Project Page Styles */
+      section[id^="project"] {
+        padding: 20px;
+        display: none;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #354f52;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      /* Media Query for Responsive Design (Adjust as needed) */
+      @media screen and (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        header img {
+          width: 100px;
+          height: 100px;
+        }
+
+        header p {
+          font-size: 1rem;
+        }
+
+        header a {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+
+        .project img {
+          width: 80px;
+          height: 80px;
+        }
+
+        .project h3 {
+          font-size: 1.2rem;
+        }
+
+        .project p {
+          font-size: 0.9rem;
+        }
+
+        .project a {
+          font-size: 0.8rem;
+          padding: 6px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body class="C">
+    <nav class="navbar">
+      <ul>
+        <li><a href="../display_feedback">Display Feedback</a></li>
+        <li><a href="../feedback">Give your Feedback</a></li>
+        <li><a href="../about_me">About Me</a></li>
+      </ul>
+    </nav>
+    <!-- Header Section --><br /><br /><br />
+    <header>
+      <h1>Frank Ssekanjako</h1>
+      <img src="{% static 'images/ai4.jpg' %}" alt="Frank Ssekanjako" />
+      <p>Front-End and Back-End Django Web and Application Web Developer</p>
+      <a href="https://github.com/msgbong">Explore My Work</a>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <h2>Portfolio Projects</h2>
+
+      <!-- Project 1 -->
+      <div class="project">
+        <h3>My Portfolio web</h3>
+        <img src="{% static 'images/p2.png' %}" alt="tours_web" />
+        <p>
+          Ssekanjako Frank's Portfolio" is a professional and visually engaging
+          website that highlights the impressive web development skills and
+          achievements of Ssekanjako Frank. This dynamic online portfolio offers
+          a glimpse into his educational background, technical expertise, and a
+          collection of remarkable web projects. With an elegant design and
+          user-friendly interface, it serves as a platform for networking and
+          collaboration within the web development community.
+        </p>
+        <a href="#project1">View Project</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project">
+        <h3>tours web page</h3>
+        <img src="{% static 'images/t2.png' %}" alt="water" />
+        <p>A website for tours and travel Uganda, <em> ON sale</em></p>
+        <a href="#p1">View Project</a>
+      </div>
+
+      <!-- Add more projects as needed -->
+    </section>
+
+    <!-- Individual Project Pages -->
+
+    <!-- Project 1 Page -->
+    <section id="project1">
+      <h2>Project 1 Title</h2>
+      <p>
+        Describe the project's purpose, goals, and the role you played in it.
+      </p>
+      <h3>Screenshots</h3>
+      <!-- Add your project screenshots here -->
+      <img src="{% static 'images/t3.png' %}" alt="Screenshot 1" />
+      <img src="{% static 'images/t4.png' %}" alt="Screenshot 2" />
+
+      <h3>Technologies Used</h3>
+      <ul>
+        <li>Django</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <!-- Add more technologies used in your project -->
+      </ul>
+
+      <h3>Project Links</h3>
+      <a href="https://www.example.com/project1" target="_blank"
+        >Live Project</a
+      >
+      <a href="https://github.com/msgbong">GitHub Repository</a>
+    </section>
+
+    <!-- Project 2 Page -->
+    <section id="project2">
+      <h2>Project 2 Title</h2>
+      <p>
+        Describe the project's purpose, goals, and the role you played in it.
+      </p>
+      <h3>Screenshots</h3>
+      <!-- Add your project screenshots here -->
+      <img src="screenshot3.jpg" alt="Screenshot 3" />
+      <img src="screenshot4.jpg" alt="Screenshot 4" />
+
+      <h3>Technologies Used</h3>
+      <ul>
+        <li>Django</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Python</li>
+        <!-- Add more technologies used in your project -->
+      </ul>
+
+      <h3>Project Links</h3>
+      <a href="https://www.example.com/project2" target="_blank"
+        >Live Project</a
+      >
+      <a href="https://github.com/yourusername/project2" target="_blank"
+        >GitHub Repository</a
+      >
+    </section>
+
+    <!-- Add more project pages as needed -->
+  </body>
+</html>

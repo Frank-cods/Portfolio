@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <style>
+      /* Add this CSS code to your styles.css file */
+
+      /* Feedback form styles */
+      body.b {
+        background-color: aqua; /* Transparent background */
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Semi-transparent white background */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      form h1 {
+        color: #007acc; /* Blue heading color */
+        text-align: center;
+      }
+
+      form label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      form input[type="text"],
+      form input[type="email"],
+      form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      form button {
+        display: block;
+        margin-top: 10px;
+        background-color: #007acc;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Change button background color on hover */
+      form button:hover {
+        background-color: #005b8e; /* Darker blue on hover */
+      }
+      .navbar {
+        background-color: rgba(
+          34,
+          34,
+          34,
+          0.7
+        ); /* Transparent black background */
+        border-radius: 25px;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .navbar li {
+        display: inline;
+      }
+
+      .navbar li a {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+
+      .navbar li a:hover {
+        background-color: #4caf50;
+        color: rgba(34, 34, 34, 0.7);
+      }
+    </style>
+  </head>
+  <body class="b">
+    <nav>
+      <ul class="navbar">
+        <li><a href="../">Go to welcome page</a></li>
+        <li><a href="../display_feedback">Display Feedback</a></li>
+        <li><a href="../about_me">About Me</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <h1>Feedback Form</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </body>
+</html>

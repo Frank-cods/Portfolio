@@ -1,0 +1,317 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Frank Ssekanjako</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <style>
+      /* Reset some default styles */
+      body,
+      h1,
+      h2,
+      p,
+      ul,
+      li,
+      blockquote {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Apply a background color and set a common font family */
+      body {
+        background-color: #f2f2f2; /* Light gray background */
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333; /* Dark gray text color */
+      }
+
+      /* Header styles */
+      h1 {
+        text-align: center;
+        color: #007acc; /* Blue heading color */
+        margin-top: 20px;
+      }
+
+      /* Main content container */
+      #bio {
+        background-color: #fff; /* White background for the bio section */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      }
+
+      /* Bio section text styles */
+      #bio p {
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      /* Skills section */
+      #skills {
+        background-color: #fff; /* White background for the skills section */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Skills list styles */
+      #skills ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      /* Resume/CV section */
+      #resume {
+        background-color: #fff; /* White background for the resume section */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Download resume link */
+      #resume a {
+        display: inline-block;
+        background-color: #007acc;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      #resume a:hover {
+        background-color: #005b8e; /* Darker blue on hover */
+      }
+
+      /* Contact section */
+      #contact {
+        background-color: #fff; /* White background for the contact section */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Contact info list styles */
+      #contact ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      #contact ul li {
+        margin-bottom: 10px;
+      }
+
+      /* Links styles */
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Testimonials section */
+      #testimonials {
+        background-color: #fff; /* White background for the testimonials section */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer styles */
+      footer {
+        text-align: center;
+        background-color: #333; /* Dark background for the footer */
+        color: #fff; /* White text color */
+        padding: 10px 0;
+      }
+
+      /* Blockquote styles */
+      blockquote {
+        background-color: #f7f7f7; /* Light gray background for blockquotes */
+        padding: 10px 20px;
+        border-left: 5px solid #007acc; /* Blue border on the left */
+        margin: 20px 0;
+      }
+
+      /* Responsive styles for smaller screens */
+      @media screen and (max-width: 768px) {
+        /* Adjust styles for smaller screens as needed */
+        #bio,
+        #skills,
+        #resume,
+        #contact,
+        #testimonials {
+          margin: 10px;
+          padding: 15px;
+        }
+      }
+      .navbar {
+        background-color: rgba(
+          34,
+          34,
+          34,
+          0.7
+        ); /* Transparent black background */
+        border-radius: 25px;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .navbar li {
+        display: inline;
+      }
+
+      .navbar li a {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+
+      .navbar li a:hover {
+        background-color: #4caf50;
+        color: rgba(34, 34, 34, 0.7);
+      }
+      .circular-image {
+        text-align: justify;
+        width: 100px; /* Adjust the size as needed */
+        height: 100px; /* Adjust the size as needed */
+        border-radius: 50%; /* Makes the image circular */
+        display: block; /* Ensures proper rendering as a block-level element */
+        float: left; /* Aligns the image to the left */
+        margin-right: 10px; /* Adds a small margin to the right for spacing */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="navbar">
+        <li><a href="../">Go to welcome page</a></li>
+        <li><a href="../display_feedback">Display Feedback</a></li>
+        <li><a href="../feedback">Give your Feedback</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <!-- Bio Section -->
+    <section id="bio">
+      <br /><br /><br /><br /><br />
+      <h1>About Me</h1>
+      <p>
+        Hello! I'm Frank Ssekanjako, a passionate web developer with a
+        background in computer science. I have a strong affinity for turning
+        ideas into digital realities. With a focus on both front-end and
+        back-end development, I enjoy creating dynamic and user-friendly web
+        applications that leave a lasting impact.
+      </p>
+      <p>
+        My education includes a Bachelor's degree in Computer Science from
+        <em> Makerere University Kampala Uganda</em>, and I hold certifications
+        in various web development technologies. I have 2 years of experience
+        working on a wide range of web projects, from e-commerce platforms to
+        content management systems.
+      </p>
+      <p>
+        Outside of the digital world, I'm an avid nature enthusiast and a
+        photography enthusiast. In my free time, you'll often find me hiking in
+        the mountains or capturing the beauty of the world through my camera
+        lens.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Django</li>
+        <!-- Add more skills as needed -->
+      </ul>
+    </section>
+
+    <!-- Resume/CV Section -->
+    <section id="resume">
+      <h2>Resume/CV</h2>
+      <p>You can download my resume/CV by clicking the link below:</p>
+      <a href="{% static 'media/resume.pdf' %}" download>Download Resume</a>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section id="contact">
+      <h2>Contact Information</h2>
+      <p>
+        Feel free to reach out to me via the contact form below or through the
+        following channels:
+      </p>
+      <ul>
+        <li>Email: fssekanjako@gmail.com</li>
+        <li>Phone: +256 700953178</li>
+        <li>
+          <a href="https://www.linkedin.com/feed/">LinkedIn Profile</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCIUpPG5tQPW3pndff8ns9og"
+            >You Tube</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <!-- Blog/Articles Section (Optional) -->
+    <section id="blog">
+      <h2>Blog/Articles</h2>
+      <p>
+        <em>
+          <a href="../movie"
+            ><img
+              src="{% static 'images/ai5.jpg' %}"
+              alt="movie"
+              class="circular-image"
+            /><br />Get your free movie gift here</a
+          ></em
+        >
+      </p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>
+        <p>
+          "Frank is an exceptional developer who consistently delivers
+          high-quality work. His dedication to his craft and attention to detail
+          are truly impressive.Makerere University
+        </p>
+      </blockquote>
+      <!-- Add more testimonials as needed -->
+    </section>
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2023 Frank Ssekanjako. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

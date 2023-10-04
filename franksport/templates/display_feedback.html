@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}" />
+    <title>Feedback Entries</title>
+    <style>
+      /* CSS styles go here */
+      body {
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Style the heading */
+      h1 {
+        color: green;
+        text-align: center;
+      }
+
+      /* Style the feedback entries list */
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        background-color: rgba(34, 34, 34, 0.7);
+        border: 1px solid rgba(34, 34, 34, 0.7);
+        padding: 15px;
+        margin: 10px 0;
+      }
+
+      /* Style the feedback entry details */
+      strong {
+        color: brown;
+      }
+
+      /* Style the "No feedback entries yet." message */
+      p {
+        color: blue;
+        text-align: center;
+      }
+      .navbar {
+        background-color: rgba(
+          34,
+          34,
+          34,
+          0.7
+        ); /* Transparent black background */
+        border-radius: 25px;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .navbar li {
+        display: inline;
+      }
+
+      .navbar li a {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+
+      .navbar li a:hover {
+        background-color: #4caf50;
+        color: rgba(34, 34, 34, 0.7);
+      }
+
+      .content {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="navbar">
+        <li><a href="../">Go to welcome page</a></li>
+        <li><a href="../feedback">Give your Feedback</a></li>
+        <li><a href="../about_me">About Me</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <h1>Feedback Entries</h1>
+
+    {% if feedback_entries %}
+    <ul>
+      {% for feedback in feedback_entries %}
+      <li>
+        <strong>Name:</strong> {{ feedback.name }}<br />
+        <strong>Email:</strong> {{ feedback.email }}<br />
+        <strong>Message:</strong> {{ feedback.message }}<br />
+        <strong>Date Submitted:</strong> {{ feedback.date_submitted }}
+      </li>
+      <br />
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No feedback entries yet.</p>
+    {% endif %}
+  </body>
+</html>

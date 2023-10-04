@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Entries</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <style>
+      /* Body styles */
+      body.a {
+        background-color: aquamarine; /* Transparent background */
+      }
+
+      /* Feedback entries list styles */
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px; /* Add some margin for spacing */
+      }
+
+      li {
+        background-color: rgba(
+          34,
+          34,
+          34,
+          0.7
+        ); /* Semi-transparent white background */
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin: 10px 0;
+        transition: background-color 0.3s;
+      }
+
+      /* Change background color on hover */
+      li:hover {
+        background-color: rgba(
+          47,
+          158,
+          192,
+          0.9
+        ); /* Slightly darker on hover */
+      }
+
+      /* Feedback entry details styles */
+      strong {
+        color: brown;
+      }
+
+      /* Empty feedback message styles */
+      li:empty::before {
+        content: "No feedback entries yet.";
+        color: blue;
+      }
+      .navbar {
+        background-color: rgba(
+          34,
+          34,
+          34,
+          0.7
+        ); /* Transparent black background */
+        border-radius: 25px;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .navbar li {
+        display: inline;
+      }
+
+      .navbar li a {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+
+      .navbar li a:hover {
+        background-color: #4caf50;
+        color: rgba(34, 34, 34, 0.7);
+      }
+    </style>
+  </head>
+  <body class="a">
+    <nav>
+      <ul class="navbar">
+        <li><a href="../">Go to welcome page</a></li>
+        <li><a href="../display_feedback">Display Feedback</a></li>
+        <li><a href="../feedback">Give your Feedback</a></li>
+        <li><a href="../about_me">About Me</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <h1>Feedback Entries</h1>
+    <ul>
+      {% for entry in feedback_entries %}
+      <li>
+        <strong>{{ entry.name }}</strong> ({{ entry.email }})<br />
+        {{ entry.message }}<br />
+        Submitted on: {{ entry.date_submitted }}
+      </li>
+      {% empty %}
+      <li>No feedback entries yet.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
